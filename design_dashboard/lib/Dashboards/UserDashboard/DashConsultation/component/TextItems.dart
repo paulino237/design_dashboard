@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextItems extends StatelessWidget {
   String text1;
@@ -21,17 +22,18 @@ class TextItems extends StatelessWidget {
           child: Container(
             margin: EdgeInsets.only(left: 18.0),
             child: Text(text1,
-                style: TextStyle(
+                style: GoogleFonts.montserrat(
                     fontSize: 18, color: color1, fontWeight: FontWeight.bold)),
           ),
         ),
         Container(
-          padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+          margin: EdgeInsets.only(right: 18.0),
           child: InkWell(
             onTap: () {},
             child: Text(
               text2,
-              style: TextStyle(fontWeight: FontWeight.bold, color: colortext2),
+              style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.bold, color: colortext2),
             ),
           ),
         )

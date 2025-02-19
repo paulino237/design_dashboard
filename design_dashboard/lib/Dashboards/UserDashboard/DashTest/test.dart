@@ -2,6 +2,7 @@ import 'package:design_dashboard/Constante.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/Component/BarSearch.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/DashConsultation/component/TextItems.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/DashConsultation/component/card.dart';
+import 'package:design_dashboard/Dashboards/UserDashboard/DashTest/component/card_test.dart';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -12,23 +13,23 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 // this file is a base of dashboard all components that are doing the dashboard are here
 
-class RendezVousGraphique extends StatelessWidget {
+class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // fictif data  for test
+    // Données fictives pour l'exemple
     final data = [
-      RendezVousData('Waiting', 5),
-      RendezVousData('Complete', 20),
-      RendezVousData('Cancel', 10),
+      TestData('Waiting', 5),
+      TestData('Complete', 20),
+      TestData('Cancel', 10),
     ];
     final data1 = [
-      SpentData("Mo", 3000),
-      SpentData("Tu", 1000),
-      SpentData("We", 2500),
-      SpentData("Th", 4120),
-      SpentData("Fri", 2150),
-      SpentData("Sa", 10),
-      SpentData("Su", 150),
+      SpentData("Mo", 20.1),
+      SpentData("Tu", 10.1),
+      SpentData("We", 20.1),
+      SpentData("Th", 48.1),
+      SpentData("Fri", 150.1),
+      SpentData("Sa", 10.1),
+      SpentData("Su", 20.1),
     ];
     void goBack(BuildContext context) {
       Navigator.pop(context);
@@ -52,7 +53,7 @@ class RendezVousGraphique extends StatelessWidget {
             ),
             title: Center(
               child: Text(
-                "Statistics Consultations",
+                "Statistics Test",
                 style: GoogleFonts.montserrat(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
@@ -78,7 +79,7 @@ class RendezVousGraphique extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(left: 18.0),
-                      child: Text("Total Spent",
+                      child: Text("Total Spend",
                           style: GoogleFonts.montserrat(
                               fontSize: 18,
                               color: blue,
@@ -94,7 +95,7 @@ class RendezVousGraphique extends StatelessWidget {
                             .withOpacity(0.5),
                         borderRadius: BorderRadius.circular(13.0)),
                     child: Center(
-                        child: Text("300000 XAF",
+                        child: Text("150000 XAF",
                             style: GoogleFonts.montserrat(
                                 fontSize: 15,
                                 color: green,
@@ -157,7 +158,7 @@ class RendezVousGraphique extends StatelessWidget {
               ),
               SfCircularChart(
                 title: ChartTitle(
-                  text: 'Breakdown of appointments',
+                  text: 'Breakdown of medical tests',
                   textStyle: GoogleFonts.montserrat(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -168,16 +169,16 @@ class RendezVousGraphique extends StatelessWidget {
                   overflowMode: LegendItemOverflowMode.wrap,
                 ),
                 series: <CircularSeries>[
-                  DoughnutSeries<RendezVousData, String>(
+                  DoughnutSeries<TestData, String>(
                     dataSource: data,
-                    xValueMapper: (RendezVousData data, _) => data.status,
-                    yValueMapper: (RendezVousData data, _) => data.count,
+                    xValueMapper: (TestData data, _) => data.status,
+                    yValueMapper: (TestData data, _) => data.count,
                     dataLabelSettings: const DataLabelSettings(
                       isVisible: true,
                     ),
                     radius: '80%',
                     innerRadius: '60%',
-                    pointColorMapper: (RendezVousData data, _) {
+                    pointColorMapper: (TestData data, _) {
                       if (data.status == 'Waiting') {
                         return Colors.orange;
                       } else if (data.status == 'Complete') {
@@ -193,7 +194,7 @@ class RendezVousGraphique extends StatelessWidget {
                 height: 20,
               ),
               TextItems(
-                text1: 'Appointment Completed',
+                text1: 'Medicals Tests Completed',
                 text2: 'See All',
                 color1: blue,
                 colortext2: blue,
@@ -206,7 +207,7 @@ class RendezVousGraphique extends StatelessWidget {
                 height: 20,
               ),
               TextItems(
-                text1: 'Appointment Wainting',
+                text1: 'Medicals Tests Wainting',
                 text2: 'See All',
                 color1: Colors.orange,
                 colortext2: Colors.orange,
@@ -226,19 +227,19 @@ class RendezVousGraphique extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            buildcard(
+            buildcardTest(
               colorHere: Colors.deepOrange,
             ),
             SizedBox(
               width: 10,
             ),
-            buildcard(
+            buildcardTest(
               colorHere: Colors.deepOrange,
             ),
             SizedBox(
               width: 10,
             ),
-            buildcard(
+            buildcardTest(
               colorHere: Colors.deepOrange,
             )
           ],
@@ -254,19 +255,19 @@ class RendezVousGraphique extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            buildcard(
+            buildcardTest(
               colorHere: blue,
             ),
             SizedBox(
               width: 10,
             ),
-            buildcard(
+            buildcardTest(
               colorHere: blue,
             ),
             SizedBox(
               width: 10,
             ),
-            buildcard(
+            buildcardTest(
               colorHere: blue,
             )
           ],
@@ -287,9 +288,9 @@ class SpentData {
   SpentData(this.jour, this.montant);
 }
 
-class RendezVousData {
+class TestData {
   final String status;
   final int count;
 
-  RendezVousData(this.status, this.count);
+  TestData(this.status, this.count);
 }

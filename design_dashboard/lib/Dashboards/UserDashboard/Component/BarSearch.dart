@@ -1,5 +1,6 @@
 import 'package:design_dashboard/Constante.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class Search extends StatelessWidget {
@@ -32,7 +33,7 @@ class Search extends StatelessWidget {
                     ),
                     border: InputBorder.none,
                     hintText: "Enter your search",
-                    hintStyle: TextStyle(
+                    hintStyle: GoogleFonts.montserrat(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         // ignore: deprecated_member_use

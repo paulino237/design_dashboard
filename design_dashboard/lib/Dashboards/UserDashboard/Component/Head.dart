@@ -1,5 +1,6 @@
 import 'package:design_dashboard/Constante.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class Head extends StatelessWidget {
@@ -56,14 +57,16 @@ class Head extends StatelessWidget {
           children: [
             Text(
               'Email: ',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(
+                  fontSize: 15, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               width: 10,
             ),
             Text(
               'contact@sosanmed.com',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(
+                  fontSize: 15, fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -73,14 +76,16 @@ class Head extends StatelessWidget {
           children: [
             Text(
               'SOSAN ID: ',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(
+                  fontSize: 15, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               width: 10,
             ),
             Text(
               'SOASNFJZJZDZ55455656',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(
+                  fontSize: 15, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               width: 10,

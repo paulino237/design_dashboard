@@ -2,6 +2,7 @@ import 'package:design_dashboard/Constante.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/Component/Buttons.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/Component/Head.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/DashConsultation/consultation.dart';
+import 'package:design_dashboard/Dashboards/UserDashboard/DashTest/test.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
@@ -82,6 +83,12 @@ class Userdashboard extends StatelessWidget {
                       width: 10,
                     ),
                     GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Test()),
+                        );
+                      },
                       child: CardComponent(
                         text1: "100",
                         icon: LineAwesomeIcons.book_medical_solid,

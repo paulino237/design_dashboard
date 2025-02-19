@@ -1,6 +1,7 @@
 import 'package:design_dashboard/Constante.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/DashConsultation/consultation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Buttons extends StatelessWidget {
   const Buttons({
@@ -22,7 +23,7 @@ class Buttons extends StatelessWidget {
               ),
               child: Text(
                 'My Détails',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.montserrat(color: Colors.white),
               ),
             ),
           ),
@@ -41,7 +42,7 @@ class Buttons extends StatelessWidget {
               ),
               child: Text(
                 'Invite Friends',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.montserrat(color: Colors.white),
               ),
             ),
           ),

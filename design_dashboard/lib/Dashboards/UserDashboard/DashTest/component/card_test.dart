@@ -4,9 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
-class buildcard extends StatelessWidget {
+class buildcardTest extends StatelessWidget {
   Color colorHere;
-  buildcard({
+  buildcardTest({
     required this.colorHere,
     super.key,
   });
@@ -34,6 +34,29 @@ class buildcard extends StatelessWidget {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Ra,",
+                  style: GoogleFonts.montserrat(
+                      color: colorHere,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+                SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  "Radiologie",
+                  style: GoogleFonts.montserrat(
+                      color: colorHere,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+              ],
+            ),
+            const Gap(8),
+            Row(
               children: [
                 ClipOval(
                   child: Image.asset(
@@ -48,7 +71,7 @@ class buildcard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Dr SOSAN',
+                        'Hospital SOSAN',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.montserrat(
@@ -58,28 +81,18 @@ class buildcard extends StatelessWidget {
                           height: 1,
                         ),
                       ),
-                      const Gap(8),
-                      Text(
-                        'Dentist ',
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 14,
-                          color: const Color(0xff8696BB),
-                          height: 1,
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ],
             ),
-            const Gap(20),
+            const Gap(15),
             const Divider(
               color: Color(0xffF5F5F5),
               height: 1,
               thickness: 1,
             ),
-            const Gap(20),
+            const Gap(15),
             Row(
               children: [
                 Expanded(
@@ -125,7 +138,7 @@ class buildcard extends StatelessWidget {
                 ),
               ],
             ),
-            const Gap(20),
+            const Gap(10),
             SizedBox(
               width: double.infinity,
               child: TextButton(
