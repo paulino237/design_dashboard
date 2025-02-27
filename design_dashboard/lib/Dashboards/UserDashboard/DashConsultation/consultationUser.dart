@@ -50,14 +50,13 @@ class RendezVousGraphique extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-            title: Center(
-              child: Text(
-                "Statistics Consultations",
-                style: GoogleFonts.montserrat(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
+            centerTitle: true,
+            title: Text(
+              "Statistics Consultations",
+              style: GoogleFonts.montserrat(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             backgroundColor: green,
           ),

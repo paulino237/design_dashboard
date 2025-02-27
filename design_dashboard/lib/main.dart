@@ -1,6 +1,16 @@
-import 'package:design_dashboard/Dashboards/UserDashboard/DashConsultation/consultation.dart';
+import 'package:design_dashboard/Dashboards/DoctorDashboard/Component/balance.dart';
+import 'package:design_dashboard/Dashboards/DoctorDashboard/Component/consultation.dart';
+import 'package:design_dashboard/Dashboards/DoctorDashboard/DoctorDashboard.dart';
+import 'package:design_dashboard/Dashboards/HospitalDashboard/Component/ConsultationHospital.dart';
+import 'package:design_dashboard/Dashboards/HospitalDashboard/Component/DoctorHospital.dart';
+import 'package:design_dashboard/Dashboards/HospitalDashboard/Component/MedicalTest.dart';
+import 'package:design_dashboard/Dashboards/HospitalDashboard/Component/balance_hospital.dart';
+import 'package:design_dashboard/Dashboards/HospitalDashboard/HospitalDashboard.dart';
+import 'package:design_dashboard/Dashboards/UserDashboard/DashConsultation/consultationUser.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/DashTest/test.dart';
+import 'package:design_dashboard/Doctor/detail_page.dart';
 import 'package:design_dashboard/Home.dart';
+import 'package:design_dashboard/InfoDoctor.dart/InfoDoctor.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Home(),
+      home: Infodoctor(),
     );
   }
 }

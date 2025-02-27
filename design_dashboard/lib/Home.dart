@@ -1,4 +1,6 @@
 import 'package:design_dashboard/Constante.dart';
+import 'package:design_dashboard/Dashboards/DoctorDashboard/DoctorDashboard.dart';
+import 'package:design_dashboard/Dashboards/HospitalDashboard/HospitalDashboard.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/Component/Head.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/UserDashboard.dart';
 import 'package:flutter/material.dart';
@@ -8,27 +10,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Future<void> _showNotAvailablePopup(BuildContext context) async {
-      return showDialog<void>(
-        context: context,
-        barrierDismissible: true,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text('Feature not available'),
-            content: Text('Sorry, this feature is not yet available.'),
-            actions: <Widget>[
-              TextButton(
-                child: Text('OK'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
-          );
-        },
-      );
-    }
-
     // Check if this is the first time the user has entered the application
 
     // popup dialog
@@ -77,7 +58,10 @@ class Home extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                _showNotAvailablePopup(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Doctordashboard()),
+                );
               },
               child: Text("Dashboard Doctor"),
             ),
@@ -96,7 +80,10 @@ class Home extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                _showNotAvailablePopup(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Hospitaldashboard()),
+                );
               },
               child: Text("Dashboard Hospital"),
             )

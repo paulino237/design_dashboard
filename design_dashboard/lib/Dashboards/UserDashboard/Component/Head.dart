@@ -58,7 +58,7 @@ class Head extends StatelessWidget {
             Text(
               'Email: ',
               style: GoogleFonts.montserrat(
-                  fontSize: 15, fontWeight: FontWeight.bold),
+                  fontSize: 15, fontWeight: FontWeight.w400),
             ),
             SizedBox(
               width: 10,
@@ -66,7 +66,7 @@ class Head extends StatelessWidget {
             Text(
               'contact@sosanmed.com',
               style: GoogleFonts.montserrat(
-                  fontSize: 15, fontWeight: FontWeight.bold),
+                  fontSize: 15, fontWeight: FontWeight.w400),
             ),
           ],
         ),
@@ -77,7 +77,7 @@ class Head extends StatelessWidget {
             Text(
               'SOSAN ID: ',
               style: GoogleFonts.montserrat(
-                  fontSize: 15, fontWeight: FontWeight.bold),
+                  fontSize: 15, fontWeight: FontWeight.w400),
             ),
             SizedBox(
               width: 10,
@@ -85,7 +85,7 @@ class Head extends StatelessWidget {
             Text(
               'SOASNFJZJZDZ55455656',
               style: GoogleFonts.montserrat(
-                  fontSize: 15, fontWeight: FontWeight.bold),
+                  fontSize: 15, fontWeight: FontWeight.w400),
             ),
             SizedBox(
               width: 10,

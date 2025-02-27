@@ -51,7 +51,7 @@ class Search extends StatelessWidget {
                   color: Color.fromARGB(255, 241, 239, 239),
                   borderRadius: BorderRadius.circular(13.0)),
               child: Icon(
-                LineAwesomeIcons.filter_solid,
+                LineAwesomeIcons.sliders_h_solid,
                 color: blue,
                 size: 25.0,
               ),

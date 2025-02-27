@@ -1,15 +1,17 @@
 import 'package:design_dashboard/Constante.dart';
+import 'package:design_dashboard/Dashboards/DoctorDashboard/Component/balance.dart';
+import 'package:design_dashboard/Dashboards/DoctorDashboard/Component/consultation.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/Component/Buttons.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/Component/Head.dart';
-import 'package:design_dashboard/Dashboards/UserDashboard/DashBalance/BalanceOfUser.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/DashConsultation/consultationUser.dart';
 import 'package:design_dashboard/Dashboards/UserDashboard/DashTest/test.dart';
+import 'package:design_dashboard/Dashboards/UserDashboard/UserDashboard.dart';
 import 'package:design_dashboard/Dashboards/card_component.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
-class Userdashboard extends StatelessWidget {
+class Doctordashboard extends StatelessWidget {
   final Map<String, String> dataMap = {
     'Language': '',
     'Notification': '',
@@ -53,22 +55,21 @@ class Userdashboard extends StatelessWidget {
                 child: Row(
                   children: [
                     GestureDetector(
+                      child: CardComponent(
+                        text1: "300000 ",
+                        icon: LineAwesomeIcons.wallet_solid,
+                        color: blue,
+                        text3: "Total amount won",
+                        colorText: green,
+                        text2: 'Balance',
+                        iconColor: blue,
+                      ),
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => BalanceOfUser()),
+                          MaterialPageRoute(builder: (context) => Balance()),
                         );
                       },
-                      child: CardComponent(
-                        text1: "3000 XAF",
-                        icon: LineAwesomeIcons.wallet_solid,
-                        color: blue,
-                        text3: "Expenses",
-                        colorText: green,
-                        text2: 'Amount Spent',
-                        iconColor: blue,
-                      ),
                     ),
                     SizedBox(
                       width: 10,
@@ -78,7 +79,7 @@ class Userdashboard extends StatelessWidget {
                         text1: "300",
                         icon: Icons.person,
                         color: green,
-                        text3: "All Doctor appointment",
+                        text3: "Appointment Statistics",
                         colorText: blue,
                         text2: ' Consultation',
                         iconColor: green,
@@ -87,30 +88,30 @@ class Userdashboard extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RendezVousGraphique()),
+                              builder: (context) => ConsultationDoctor()),
                         );
                       },
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Test()),
-                        );
-                      },
-                      child: CardComponent(
-                        text1: "100",
-                        icon: LineAwesomeIcons.book_medical_solid,
-                        color: blue,
-                        text3: "All Test Appointment",
-                        colorText: green,
-                        text2: 'Medical Tests',
-                        iconColor: blue,
-                      ),
-                    ),
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (context) => Test()),
+                    //     );
+                    //   },
+                    //   child: CardComponent(
+                    //     text1: "100",
+                    //     icon: LineAwesomeIcons.book_medical_solid,
+                    //     color: blue,
+                    //     text3: "All Test Appointment",
+                    //     colorText: green,
+                    //     text2: 'Medical Tests',
+                    //     iconColor: blue,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

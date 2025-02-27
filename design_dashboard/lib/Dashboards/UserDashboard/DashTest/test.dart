@@ -51,14 +51,13 @@ class Test extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-            title: Center(
-              child: Text(
-                "Statistics Test",
-                style: GoogleFonts.montserrat(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
+            centerTitle: true,
+            title: Text(
+              "Statistics Test",
+              style: GoogleFonts.montserrat(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             backgroundColor: green,
           ),
