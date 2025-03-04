@@ -11,6 +11,7 @@ import 'package:design_dashboard/Dashboards/UserDashboard/DashTest/test.dart';
 import 'package:design_dashboard/Doctor/detail_page.dart';
 import 'package:design_dashboard/Home.dart';
 import 'package:design_dashboard/InfoDoctor.dart/InfoDoctor.dart';
+import 'package:design_dashboard/Paiement/paiement.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Infodoctor(),
+      home: Paiement(),
     );
   }
 }
