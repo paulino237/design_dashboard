@@ -5,7 +5,7 @@ import 'package:design_dashboard/Constante.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http; 
+import 'package:http/http.dart' as http;
 
 class Paiement extends StatefulWidget {
   @override
@@ -19,9 +19,11 @@ class _PaiementState extends State<Paiement> {
   }
 
   bool loading = false;
-  late String passwordSosan = "";
+  late String passwordSosan = "y54VfGUAOAUjL4oMFKUEfMAB0Qga";
   late String getAccessToken;
+  late String xAUTH = "WU5PVEVIRUFEMjpAWU5vVGVIRUBEMIBST0RBUEk=";
   late String payToken;
+  late String pinsosan = "1469";
 
   // Api for getAccessToken
   GetAcessToken() async {
@@ -54,7 +56,7 @@ class _PaiementState extends State<Paiement> {
   InitPaiement(String GetAccesstoken) async {
     try {
       var headers = {
-        'X-AUTH-TOKEN': 'Votre X-AUTH-TOKEN',
+        'X-AUTH-TOKEN': xAUTH,
         'Authorization': 'Bearer $GetAccesstoken'
       };
       var data = '''''';
@@ -83,16 +85,16 @@ class _PaiementState extends State<Paiement> {
       String paytokenStep2) async {
     try {
       var headers = {
-        'X-AUTH-TOKEN': 'votre X-AUTH-TOKEN',
+        'X-AUTH-TOKEN': xAUTH,
         'Content-Type': 'application/json',
         'Authorization': GetaccessToken
       };
       var data = json.encode({
         "notifUrl": "https://www.y-note.cm/notification",
-        "channelUserMsisdn": "numero test de  SOSAN",
+        "channelUserMsisdn": "659925202",
         "amount": amount,
         "subscriberMsisdn": numberPatient,
-        "pin": "code pin de sosan",
+        "pin": pinsosan,
         "orderId": randonOrder,
         "description": "Commande 12345",
         "payToken": paytokenStep2
@@ -138,7 +140,7 @@ class _PaiementState extends State<Paiement> {
             });
 
             //****************STEP  3 DOING THE PAYMENT ******************/
-            DoingPaiement("1500", getAccessToken, "656552545", payToken)
+            DoingPaiement("1500", getAccessToken, "690379225", payToken)
                 .then((value) {
               setState(() {
                 loading = false;
